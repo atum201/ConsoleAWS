@@ -84,7 +84,7 @@ namespace ConsoleAWS
                         try
                         {
                             string function = Console.ReadLine();
-                            string result = await helper.CallLambdaAsync(credentials, function, new { table = "ioioMember", crud = "r", query = new { KeyConditionExpression = "Name Exists" } });
+                            string result = await helper.CallLambdaAsync(credentials, function, new { crud= "r", table= "ioioMember", query= new { } });
                             Console.WriteLine("Result :" + result);
                         }
                         catch
